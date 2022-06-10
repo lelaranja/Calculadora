@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family:'Signika Negative', sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -32,6 +34,18 @@ body{
     background: #FFC125;
 }
 
-.grid-container > .opMaior{
-    
+.opMaior{
+  grid-column: span 2;  
+}
+
+.resultado{
+    grid-column: 1/-1;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
