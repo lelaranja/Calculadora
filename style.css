@@ -9,3 +9,21 @@
 body{
     background: linear-gradient(to right, #FF7F24, #FFC125) ;
 }
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+
+.grid-container > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border:  1px solid #111;
+    outline: none;
+    background-color: #111;
+    color: #eee;
+}
