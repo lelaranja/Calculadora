@@ -13,9 +13,41 @@ class Calculator {
     this.clear(); //String começa vazia por padrão
   }
 
+  // método para cálculo a partir dos operadores aritméticos
+  calculate() {
+    let result;
+
+    const previousOperandFloat = parseFloat(this.previousOperand);
+    const currentOperandFloat = parseFloat(this.currentOperand);
+
+    switch (this.operation) {
+      case "+":
+        result = previousOperandFloat + currentOperandFloat;
+        break;
+      case "-":
+        result = previousOperandFloat - currentOperandFloat;
+        break;
+      case "x":
+        result = previousOperandFloat * currentOperandFloat;
+        break;
+      case "÷":
+        result = previousOperandFloat / currentOperandFloat;
+        break;
+      default:
+        return;
+    }
+    this.currentOperand = result;
+    this.operation = undefined;
+    this.previousOperand = "";
+  }
+
   chooseOperation(operation) {
+    if (this.previousOperand != "") {
+      this.calculate();
+    }
+
     this.operation = operation;
-    this.previousOperand = `${this.currentOperand} ${this.operation}`; // modifica para conseguir receber o próximo número
+    this.previousOperand = this.currentOperand; // modifica para conseguir receber o próximo número
     this.currentOperand = "";
   }
 
@@ -35,7 +67,9 @@ class Calculator {
 
   //Atualizar texto do display da calculadora
   updateDisplay() {
-    this.previousOperandTextElement.innerText = this.previousOperand;
+    this.previousOperandTextElement.innerText = `${this.previousOperand} ${
+      this.operation || ""
+    }`;
     this.currentOperandTextElement.innerText = this.currentOperand;
   }
 }
