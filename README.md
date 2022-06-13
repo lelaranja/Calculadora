@@ -22,4 +22,7 @@ Colocar em prática os conhecimentos do módulo II de desenvolvimento frontend d
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 
+##  🛠💻 Referência
+
+* [Canal - dicasparadevs](https://www.youtube.com/watch?v=93wPYo1pjic)
 
