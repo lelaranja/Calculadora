@@ -30,8 +30,13 @@ body{
     color: #eee;
 }
 
+.grid-container > button:hover{
+    box-shadow: inset 0 0 0.2em #FFFFE0;
+}
+
 .grid-container > .operadores{
     background: #FFC125;
+    border: 1px solid #111;
 }
 
 .opMaior{
@@ -48,4 +53,13 @@ body{
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+.resultado > .previaResultado{
+    color: #eee;
+    font-size: 1.5rem;
+}
+.resultado > .valorDigitado{
+    color: white;
+    font-size: 2.5rem;
 }
