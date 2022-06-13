@@ -1,31 +1,20 @@
-const botoesNumericos = document.querySelectorAll("#numeros");
-const operadoresNumericos = document.querySelectorAll("#operadoresC");
-const operadorIgual = document.querySelector("#igual");
-const botaoDel = document.querySelector("#delete");
-const delAll = document.querySelector("#delAll");
-const prevResult = document.querySelector("#preview");
-const valorAtual = document.querySelector("#atValue");
+const numberButtons = document.querySelectorAll("[numeros]");
+const operationButtons = document.querySelectorAll("[operadoresC]");
+const equalsButton = document.querySelector("[igual]");
+const deleteButton = document.querySelector("[btnDelete]");
+const allClearButton = document.querySelector("[delAll]");
+const previousOperandTextElement = document.querySelector("[preview]");
+const currentOperandTextElement = document.querySelector("[atValue]");
 
-class Calculadora {
-  constructor(prevResult, valorAtual) {
-    this.prevResult = prevResult;
-    this.valorAtual = valorAtual;
+class Calculator {
+  constructor(previousOperandTextElement, currentOperandTextElement) {
+    this.previousOperandTextElement = previousOperandTextElement;
+    this.currentOperandTextElement = currentOperandTextElement;
+    this.clear();
   }
-
-  limpar() {
-    this.prevResult = "";
-    this.valorAtual = "";
-    this.operadoresNumericos = undefined;
-  }
-  atualizaValor() {
-    this.prevResult.innerText = this.prevResult;
-    this.valorAtual.innerText = this.valorAtual;
+  clear() {
+    this.currentOperand = "";
+    this.previousOperand = "";
+    this.operation = undefined;
   }
 }
-
-const calculadora = new Calculadora(prevResult, valorAtual);
-
-delAll.addEventListener("click", () => {
-  this.limpar();
-  this.atualizaValor();
-});
