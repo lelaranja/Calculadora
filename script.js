@@ -13,6 +13,9 @@ class Calculator {
     this.clear(); //String começa vazia por padrão
   }
 
+  delete() {
+    this.currentOperand = this.currentOperand.toString().slice(0, -1);
+  }
   // método para cálculo a partir dos operadores aritméticos
   calculate() {
     let result;
@@ -42,6 +45,7 @@ class Calculator {
   }
 
   chooseOperation(operation) {
+    if (this.currentOperand == "") return;
     if (this.previousOperand != "") {
       this.calculate();
     }
@@ -96,5 +100,15 @@ for (const operationButton of operationButtons) {
 //Limpando e atualizando display da calculadora
 allClearButton.addEventListener("click", () => {
   calculadora.clear();
+  calculadora.updateDisplay();
+});
+
+equalsButton.addEventListener("click", () => {
+  calculadora.calculate();
+  calculadora.updateDisplay();
+});
+
+deleteButton.addEventListener("click", () => {
+  calculadora.delete();
   calculadora.updateDisplay();
 });
