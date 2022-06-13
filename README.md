@@ -1,8 +1,8 @@
 <h1 align="center">Calculadora</h1>
 Desenvolvimento de uma calculadora simples, com uso de HTML, CSS e Javascript.
 
-# 🧮 **Sobre o projeto**
-Desenvolvimento de uma calculadora de operações aritméticas simples, com soma, subtração, multiplicação e divisão.
+## 🧮 **Sobre o projeto**
+Desenvolvimento de uma calculadora de operações aritméticas simples, com soma, subtração, multiplicação e divisão. Também com botão de casas decimais, limpar tela e deleção de números digitados incorretamente
 
 ## 🎯 Objetivo
 
